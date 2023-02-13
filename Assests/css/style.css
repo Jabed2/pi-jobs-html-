@@ -1,0 +1,363 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+
+
+
+/*
+
+   1. HTML default tag Style
+   2. Universal Uses Style
+   3. Header Style 
+      3.1 - Navbar Style
+      3.2 - Hero Search Style
+   4. comphany Jobs Style
+   5. Post Style
+      5.1 - Main Post Style
+      5.2 - Sidebar Deadline Post
+      5.3 - Sidebar Popular Style
+   6. footer Style
+      6.1 - Footer Link Style
+      6.2 - Footer Page Style
+      6.3 - Footer Nav & Credit Style
+*/
+
+:root{
+    --primary-color : #7f0d87;
+}
+
+
+
+
+
+
+/*
+  ================================
+  1. HTML default tag Style
+  ================================
+*/
+*{
+    font-family: 'Poppins', sans-serif;
+}
+img{
+    width : 100%;
+    height: 100%;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+
+
+
+/*
+  ================================
+   2. Universal Uses Style
+  ================================
+*/
+.piw-33 {
+  width : 33.33% !important;
+}
+.fs-12 {
+    font-size: 12px;
+}
+.pi-badge {
+    background: #d7900e;
+    border-radius: 30px;
+    padding: 1px 10px;
+    color: #dbdbd9;
+}
+.pi-shadow {
+    box-shadow: 3px 3px 10px #dddddd;
+    transition: all 500ms;
+}
+.pi-shadow:hover {
+    box-shadow: 5px 5px 15px rgb(194, 194, 194);
+}
+.pi-dropdown-icon::after{
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 3px;
+    vertical-align: 0.255em;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid var(--nav-itemc);
+    border-right: 1px solid var(--nav-itemc);
+    transform: rotate(45deg) skew(8deg, 8deg);
+    animation: pp_dropdown 200ms linear;
+    transition: 400ms;
+}
+.pi-dropdown-icon:hover::after{
+    border-top: 1px solid var(--nav-hover-itemc);
+    border-right: 1px solid var(--nav-hover-itemc);
+}
+.pi-dropdown-icon.show::after {
+    margin-top: 0px;
+    animation: p_dropdown 200ms linear;
+    transform: rotate(135deg) skew(8deg, 8deg);
+}
+
+@keyframes p_dropdown {
+    0%{
+        transform: rotate(45deg) skew(8deg, 8deg);
+        margin-top: 5px;
+    }
+    100%{
+        transform: rotate(135deg) skew(8deg, 8deg);
+        margin-top: 0px;
+    }
+}
+@keyframes pp_dropdown {
+    0%{
+        transform: rotate(135deg) skew(8deg, 8deg);
+    }
+    100%{
+        transform: rotate(45deg) skew(8deg, 8deg);
+    }
+}
+
+
+
+
+
+
+
+/*
+  ==================
+   3. Header Style 
+  ==================
+*/
+.pijob-header {
+   overflow: hidden;
+}
+.pijob-header .navbar-brand {
+    max-width: 150px;
+}
+.image-sec {
+    position: absolute;
+    top: 0;
+    left : 0;
+    z-index: -1;
+    width: 100%;
+   
+
+}
+.image-sec img{
+    object-fit: cover;
+    object-position: bottom;
+    height: 100%;
+}
+
+
+   /* 
+   =====================
+    3.1 - Navbar Style
+   =====================
+   */
+   #main-nav .navbar-nav .nav-item {
+    padding: 0 3px;
+ }
+ 
+ #main-nav .navbar-nav .nav-item .nav-link{
+     --nav-itemc : var(--primary-color);
+     color: var(--nav-itemc);
+     font-size : 1.1rem;
+     transition: 400ms;
+ }
+ #main-nav .navbar-nav .nav-item .nav-link:hover{
+    --nav-hover-itemc : #fff;
+    color:var(--nav-hover-itemc);
+ }
+ #main-nav .navbar-nav .dropdown-item {
+    color: var(--primary-color);
+ }
+
+
+  /* 
+   ==========================
+    3.2 - Hero Search Style
+   ==========================
+   */
+.header-content {
+    padding: 30px 0;
+}
+.pijob-header .title {
+    padding-bottom: 10px;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+.header-catagory .header-cat-nav {
+   
+}
+.header-cat-nav li{
+    padding: 0 10px;
+}
+.header-cat-nav li a{
+    color: #d7900e;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding: 5px 0;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 400;
+    transition: 400ms;
+}
+.header-cat-nav li a:hover{
+    color: #575757;
+    font-weight: 400;
+}
+
+ /* 
+   ==========================
+    4. comphany Jobs Style
+   ==========================
+   */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+.swiper-wrapper {
+    padding: 30px 0;
+}
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+   
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+
+/*
+   =============
+     Post Style 
+   =============
+*/
+#main-posts .post-item {
+   padding: 15px;
+}
+#main-posts .post-wrap {
+    padding: 15px !important;
+   /* box-shadow: 2px 2px 5px rgb(245 245 245); */ 
+}
+#main-posts .thumbnail-img{
+    
+}
+#main-posts .post-item .post-title {
+   font-size: 1.4rem;
+}
+#main-posts .post-item .second-post-title {
+    font-size: 1.1rem;
+    padding-top: 8px !important;
+}
+.post-title {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+.post-content {
+  padding: 4px 8px;
+}
+.item-view #main-posts .thumbnail-img img{
+    max-width: 100%;
+    min-width: 200px;
+    width: auto;
+
+}
+.item-view .vb-main-posts .post-item-wrap{
+   padding: 0 20px;
+}
+
+.deadline-jobs .post-wrap {
+   
+    padding: 5px 0;
+   
+}
+
+
+
+/*
+   Sidebar List Style
+*/
+.pi-list-item {
+    border-bottom: 1px solid whitesmoke;
+    box-shadow: 1px 1px 10px #f6f6f6;
+    margin: 10px 0;
+    padding: 5px;
+}
+.pi-list-item a {
+    color: #cf8f00;
+    padding: 5px 10px;
+   
+    font-weight: 500;
+}
+
+
+
+/*
+   =================
+     Footer Style
+   =================
+*/
+.footer-page .footer-nav-page li{
+
+}
+.footer-page .footer-nav-page li a{
+    --nav-itemc : var(--primary-color);
+    color: var(--nav-itemc);
+    font-size : 1.1rem;
+    transition: 400ms;
+}
+.footer-page .footer-nav-page li a:hover{
+    --nav-hover-itemc : #fff;
+    color:var(--nav-hover-itemc);
+ }
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 575px) {
+    #main-posts .thumbnail-img{
+       max-width: 120px;
+    }
+  }
+
+
+
+
+
+
+
+
+
